@@ -1,0 +1,13 @@
+public class Sentences{
+  public static void main(String args []){ //main method
+      System.out.println("Asignaciones"); //This is a sentence or Instruction
+      int i=0;
+      i=teclado·nextInt();
+      boolean esPar = i % 2 == 0 ? true : false;
+      if(esPar == true){
+	  System.out.println("Se ha tecleado un número par.");
+      }else {
+	  System.out.println("Se ha tecleado un número impar.");
+      }
+ } 
+}

@@ -27,6 +27,6 @@ public class EjercicioNif{
         int nif = dni % 23;
         //Imprimir NIF
         System.out.println("Su NIF generado es: " + dni + letrasnif[nif]);
-        teclado.close(); 
+        teclado.close();
     }
 }

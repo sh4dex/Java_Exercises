@@ -12,7 +12,7 @@ public class BreakJumpSentence{
                 if (num1 == 0) break;
             num2= aleatorio.nextInt(1000);
                 if (num2 == 0) break;
-            System.out.print("num2: "+ num2 + " num1: " + num1 );
+            System.out.print("num2: " + num2 + " num1: " + num1 );
             System.out.print(" num2/num1 = " + num2 / num1);
             System.out.println(" num2%num1 = " + num2 % num1);
         }

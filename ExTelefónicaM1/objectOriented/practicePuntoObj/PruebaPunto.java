@@ -1,4 +1,4 @@
-package ExTelefónicaM1.objectOriented;
+package ExTelefónicaM1.objectOriented.practicePuntoObj;
 
 import java.util.Random;
 

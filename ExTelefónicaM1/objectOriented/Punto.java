@@ -33,8 +33,9 @@ public class Punto {
         this.x = x;
     }
     //Class methods
-    public void pintar(){
-        System.out.println();
+    public void pintar(Punto punto){
+        System.out.print("1-El punto en x = "+punto.getX());
+        System.out.println("y tiene en y = " +punto.getY());
     }
     
 }

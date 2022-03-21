@@ -31,8 +31,8 @@ public class PruebaPunto {
       Punto [] arrPuntos = new Punto[num];
       System.out.println("Puntos del arreglo: ");
       for(int i = 0; i<num; i++){
-         int x =(new Random()).nextInt(20);
-         int y =(new Random()).nextInt(20);
+         int x =(new Random()).nextInt(100);
+         int y =(new Random()).nextInt(100);
          arrPuntos[i]= new Punto();
          arrPuntos[i].Punto(x,y);
       }

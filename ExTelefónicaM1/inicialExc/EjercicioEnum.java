@@ -1,3 +1,5 @@
+package ExTelefónicaM1.inicialExc;
+
 import java.util.Random;
 
 public class EjercicioEnum{

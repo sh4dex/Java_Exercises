@@ -1,3 +1,5 @@
+package ExTelefónicaM1.inicialExc;
+
 class LitDeclarTablas{
     public static void main(String args[]) {
         String grupo [][]= { 

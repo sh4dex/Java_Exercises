@@ -1,3 +1,5 @@
+package ExTelefónicaM1.inicialExc;
+
 public class ExampleContinueSentence{
     public static void main(String args []) {
         /*Ejercicio para determinar como funciona

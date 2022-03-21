@@ -1,3 +1,5 @@
+package ExTelefónicaM1.inicialExc;
+
 public class ArgsLineaComandos{
     /* Es necesario ejecutar con el comando:
     javac -cp . ArgsLineaComandos <argumentos>

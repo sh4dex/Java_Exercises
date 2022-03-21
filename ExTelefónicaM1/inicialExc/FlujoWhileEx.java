@@ -1,3 +1,5 @@
+package ExTelefónicaM1.inicialExc;
+
 import java.util.Random;
 import java.util.Scanner;
 

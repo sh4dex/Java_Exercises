@@ -19,6 +19,11 @@ public class Auto {
         return this.precio  - (this.precio * (Auto.dcto /100));
     }
 
+    public static void anularDescuento(){
+        Auto.dcto = 0;
+        //this.precio = 0; GEnera error no se puede acceder de un contexto estatico a una instancia
+    }
+
     @Override
     public String toString() {
         return "Auto{" + patente + ", " + marca + ", " + precio + ", " + color + "}";   

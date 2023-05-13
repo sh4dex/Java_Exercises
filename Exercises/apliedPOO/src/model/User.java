@@ -6,9 +6,9 @@ public class User {
     private String name;
     private String lastName;
     private String email;
-    private int phoneNumber;
+    private String phoneNumber;
     
-    public User(int id, String name, String lastname, String email, int phoneNumber){
+    public User(int id, String name, String lastname, String email, String phoneNumber){
         this.id = id;
         this.name = name;
         this.lastName = lastname;

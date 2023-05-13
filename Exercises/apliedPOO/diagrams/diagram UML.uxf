@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>9</x><y>63</y><w>333</w><h>117</h></coordinates><panel_attributes>CardReader
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>9</x><y>63</y><w>351</w><h>117</h></coordinates><panel_attributes>CardReader
 Package::model
 --
 _+CHARGE_BY_CUOTE : double = 0.03_
@@ -6,7 +6,7 @@ _+MIN_CUOTE : int = 1_
 _+MAX_CUOTE : int = 6_
 --
 
-+makePayment(CreditCard card, int mount, int coutes) : int  
++makePayment(CreditCard card, double mount, int coutes) : Ticket 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>81</x><y>252</y><w>135</w><h>108</h></coordinates><panel_attributes>CreditCard
 Package::model
 --
@@ -38,6 +38,6 @@ m1=1
 Package::FatClass
 --
 -clientNameAndLastName : String
--totalMountToPay : int
--mountOfEachQuote : int
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>144</x><y>171</y><w>27</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>126</y><w>126</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element></diagram>
+-totalMountToPay : double
+-mountOfEachQuote : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>144</x><y>171</y><w>27</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>351</x><y>126</y><w>108</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element></diagram>

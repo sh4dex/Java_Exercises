@@ -14,4 +14,12 @@ public class CreditCard {
         this.cardType = cardType;
         this.user = user;
     }
+
+    public boolean isValidAmount(double amount) {
+        boolean valid = false;
+        if(amount < this.balance){
+            valid = true;
+        }
+        return valid;
+    }
 }

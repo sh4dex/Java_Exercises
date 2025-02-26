@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -14,12 +15,8 @@ public class Main {
         System.out.println(yellowFever);
         System.out.println(covid);
 
-        
-
         // Create vaccines
-        Vaccine pput = new Vaccine( "PPUT", List.of(malaria, measles));
-        System.out.println(pput);
-        pput.addDisease(yellowFever);
+        Vaccine pput = new Vaccine( "PPUT", new ArrayList<Disease> (List.of(malaria, measles)));
         System.out.println(pput);
         System.out.println(malaria);
         System.out.println(measles);

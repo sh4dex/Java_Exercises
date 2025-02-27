@@ -1,4 +1,3 @@
-package algorithms.sorting.bubble;
 
 class BubbleSort {
 
@@ -20,7 +19,7 @@ class BubbleSort {
         }
 
         public static void main(String[] args) {
-            int[] arr = {0, -3, -3, 54, 1, 22,-100, 22};
+            int[] arr = {-22,-200,45,3,4,5,7,1};
             System.out.println("Array to sort: ");
             for (int n : arr) {
                 System.out.print(n + " ");

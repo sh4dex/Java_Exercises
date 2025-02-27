@@ -3,15 +3,17 @@
 void insertion_sort(int arr[], int length);
 
 int main(){
-    printf("hello");
     int a[] = {3,2,1,5,4};
-    return 0;
-}
+    int length = sizeof(a) / 4;
+    int temp;
 
-/*
-    Returns the sorted version of an unsorted array of int numbers  
-*/
-void insertion_sort(int arr[] , int length) {
-    printf("working");
-    //TODO: develop
+    for (int i = 1; i<length; i+=){
+      int j = i;
+      while( j>0 && a[j-1] < a[j]){
+        //TODO: Finish algo
+      }
+      j--;
+    }
+    printf("%d\n", length);
+    return 0;
 }

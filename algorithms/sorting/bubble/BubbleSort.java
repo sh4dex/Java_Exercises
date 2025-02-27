@@ -18,8 +18,9 @@ class BubbleSort {
                 l = l - 1;
             }
         }
+
         public static void main(String[] args) {
-            int[] arr = {0, -3, -3, 54, 1, 22, 22};
+            int[] arr = {0, -3, -3, 54, 1, 22,-100, 22};
             System.out.println("Array to sort: ");
             for (int n : arr) {
                 System.out.print(n + " ");

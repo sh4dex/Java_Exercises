@@ -4,7 +4,7 @@ import java.util.List;
 public class Vaccine {
     public String name;
     public List<Disease> diseases;
-    //public List<Dose> doses;
+    public List<Dose> doses; //This List attribute can be empty
 
     /* Constructor method 
      * The constructor method receives a list of diseases that the vaccine can prevent
@@ -18,12 +18,17 @@ public class Vaccine {
         }
         this.name = name;
         this.diseases = new ArrayList<>(diseases); 
+        this.doses = new ArrayList<>();
         /*Add this vaccine to every single disease in the list of diseases
         * that this vaccine can prevent (here we ensure the relationship)
         */
         for (Disease disease : diseases) {
             disease.addVaccine(this); // Mantiene la relación bidireccional
         }
+    }
+
+    public void addDose(int recommendedDoses, float volumeInMl, int timeBetweenDoses){
+        this.doses.add(new Dose(recommendedDoses, volumeInMl, timeBetweenDoses, this.diseases));
     }
 
     /*Add new disease */
@@ -59,7 +64,9 @@ public class Vaccine {
     /* toString method */
     @Override
     public String toString() {
-        return "Vaccine{name='" + name + "', diseases=" + diseases + "}";
+        return "Vaccine{name='" + name + 
+                "'\n\tdiseases='" + diseases + "'" +
+                "\n\tdoses=" + doses +"}";
     }
 
     /*
@@ -71,14 +78,50 @@ public class Vaccine {
     public class Dose{
         private int recommendedDoses;
         private float volumeInMl;
-        private int timeBetweenDoses;
+        private int timeBetweenDoses; //(in Hours)
+        public List<Disease> diseases;
 
-        public Dose(int recomendedDoses, float volumeInMl, int timeBetweenDoses) {
-            this.recommendedDoses = recomendedDoses;
+        public Dose(int recommendedDoses, float volumeInMl, int timeBetweenDoses, List<Disease> diseases) {
+            if(diseases == null || diseases.isEmpty()){
+                throw new IllegalArgumentException("The vaccine must be associated with at least one disease.");
+            }
+            this.diseases = diseases;
+            this.recommendedDoses = recommendedDoses;
             this.volumeInMl = volumeInMl;
             this.timeBetweenDoses = timeBetweenDoses;
         }
 
+        public int getRecommendedDoses() {
+            return recommendedDoses;
+        }
+
+        public void setRecommendedDoses(int recommendedDoses) {
+            this.recommendedDoses = recommendedDoses;
+        }
+
+        public float getVolumeInMl() {
+            return volumeInMl;
+        }
+
+        public void setVolumeInMl(float volumeInMl) {
+            this.volumeInMl = volumeInMl;
+        }
+
+        public int getTimeBetweenDoses() {
+            return timeBetweenDoses;
+        }
+
+        public void setTimeBetweenDoses(int timeBetweenDoses) {
+            this.timeBetweenDoses = timeBetweenDoses;
+        }
+
+        @Override
+        public String toString() {
+            return "Vaccine{recommendedDoses='" + recommendedDoses + 
+                "', Time='" + timeBetweenDoses + "'" +
+                "', Volume='" + volumeInMl + "'" +
+                ", Diseases=" + diseases +"}";
+        }
     }
 
     

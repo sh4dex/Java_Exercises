@@ -20,5 +20,7 @@ public class Main {
         System.out.println(pput);
         System.out.println(malaria);
         System.out.println(measles);
+        pput.addDose(3, 100, 3);
+        System.out.println(pput);
     }
 }

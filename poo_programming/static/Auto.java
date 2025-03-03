@@ -1,31 +1,32 @@
-package POO;
-
 public class Auto {
-    private String patente;
-    private String marca;
-    private double precio;
+    private String licensePlate;
+    private String brand;
+    private double price;
     private String color;
-    private static double dcto;
+    private static double discount;
 
-    public Auto(String patente, String marca, double precio, String color){
-        this.patente = patente;
-        this.marca = marca;
-        this.precio = precio;
+    // Constructor to initialize the Auto object
+    public Auto(String licensePlate, String brand, double price, String color){
+        this.licensePlate = licensePlate;
+        this.brand = brand;
+        this.price = price;
         this.color = color;
-        Auto.dcto = 10;
+        Auto.discount = 10; // Default discount is set to 10%
     }
 
-    public double precioPromocional(){
-        return this.precio  - (this.precio * (Auto.dcto /100));
+    // Method to calculate the promotional price after applying the discount
+    public double getPromotionalPrice(){
+        return this.price - (this.price * (Auto.discount / 100));
     }
 
-    public static void anularDescuento(){
-        Auto.dcto = 0;
-        //this.precio = 0; GEnera error no se puede acceder de un contexto estatico a una instancia
+    // Static method to cancel the discount
+    public static void cancelDiscount(){
+        Auto.discount = 0;
     }
 
+    // Overriding the toString method to provide a string representation of the Auto object
     @Override
     public String toString() {
-        return "Auto{" + patente + ", " + marca + ", " + precio + ", " + color + "}";   
+        return "Auto{" + licensePlate + ", " + brand + ", " + price + ", " + color + "}";   
     }
 }

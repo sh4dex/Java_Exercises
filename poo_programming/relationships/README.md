@@ -6,7 +6,7 @@ Enter vaccination_software to understand Relationships with primitive/classic pr
 
 ## Structure
 
-![Class Diagram] (../../img/poo_programming/relationships/class_diagram.png)
+![Class Diagram] (./img/poo_programming/relationships/class_diagram.png)
 
 Understanding the diagram:
 

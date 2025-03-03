@@ -1,62 +1,49 @@
-//Composition of Person for vaccination History
-
-import java.util.List;
+import java.util.Date;
 
 public class Person {
+    private int id;
+    private String name;
+    private Date birthday;
+    private VaccinationHistory history; // Single history with multiple events
 
-    public int id;
-    public String name;
-    public int age;
-    public int birth;
-    public VaccinationHistory history;
-
-    public Person(int id) {
+    public Person(int id, String name, Date birthday) {
         this.id = id;
-        this.history = new VaccinationHistory();
-    }
-
-    public Person() {
-    }
-
-    public void setName(String name) {
         this.name = name;
+        this.birthday = birthday;
+        this.history = new VaccinationHistory(); // Initialize with an empty history
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setBirth(int birth) {
-        this.birth = birth;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
-    public int getBirth() {
-        return birth;
+    public VaccinationHistory getHistory() {
+        return history;
     }
 
-    public class VaccinationHistory {
-        
-        private int vaccinationDate;
-        public List<Vaccine> vaccines;
-        public int numerOfDoses;
-        
-        public VaccinationHistory(int vaccinationDate, Vaccine vaccine, int numerOfDoses){
-            if (vaccines.size() > 0) {
-                this.vaccines = new Vaccine(List<Disease> diseases);
-            } else {
-                throw new IllegalArgumentException("No vaccines avalible to create a history");
-            }
-            this.vaccinationDate = vaccinationDate;
-
-        }
-    
+    @Override
+    public String toString() {
+        return "Person{id=" + id + ", name='" + name + "', birthday=" + birthday + 
+            ", history=" + history + "}";
     }
 }

@@ -53,6 +53,10 @@ public class Vaccine {
         return diseases;
     }
 
+    public List<Dose> getDoses(){
+        return doses;
+    }
+
     public void setDiseases(List<Disease> diseases) {
         if (diseases != null && !diseases.isEmpty()) {
             this.diseases = diseases;
